@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch Example</title>
+</head>
+<body>
+  <input type="text" id="inp">
+  <button id="bt">Загрузить данные</button>
+
+  <script>
+    document.getElementById("bt").addEventListener("click", function() {
+      // Получаем значение из поля ввода
+      var address = document.getElementById("inp").value;
+
+      // Используем fetch для загрузки данных
+      fetch(address)
+        .then(function(response) {
+          return response.text(); // Преобразуем Response в текст
+        })
+        .then(function(data) {
+          // Помещаем результат в поле ввода
+          document.getElementById("inp").value = data;
+        })
+        .catch(function(error) {
+          console.error("Произошла ошибка: " + error);
+        });
+    });
+  </script>
+</body>
+</html>

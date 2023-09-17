@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/login/*"
+  to = "/login.html"
+
+[[redirects]]
+  from = "/promise/*"
+  to = "/promise.html"
+
+[[redirects]]
+  from = "/fetch/*"
+  to = "/fetch.html"
